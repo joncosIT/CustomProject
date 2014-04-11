@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/")
 public class BaseController {
 
-    @RequestMapping(value="/welcome", method = RequestMethod.GET)
+    @RequestMapping(value="/*", method = RequestMethod.GET)
     public String welcome(ModelMap model) {
 
-        model.addAttribute("message", "Maven Web Project + Spring 3 MVC- welcome()");
+        model.addAttribute("message", "Ejemplo de proyecto maven escribe tu nombre para saludo)");
 
         //Spring uses InternalResourceViewResolver and return back index.jsp
         return "index";
@@ -23,7 +23,7 @@ public class BaseController {
     @RequestMapping(value="/welcome/{name}", method = RequestMethod.GET)
     public String welcomeName(@PathVariable String name, ModelMap model) {
 
-        model.addAttribute("message", "Maven Web Project + Spring 3 MVC - " + name);
+        model.addAttribute("message", "Maven Project for " + name);
         return "index";
 
     }
