@@ -13,7 +13,7 @@ public class BaseController {
     @RequestMapping(value="/*", method = RequestMethod.GET)
     public String welcome(ModelMap model) {
 
-        model.addAttribute("message", "Ejemplo de proyecto maven escribe tu nombre para saludo)");
+        model.addAttribute("message", "Ejemplo de proyecto maven con integracion en CLOUD ");
 
         //Spring uses InternalResourceViewResolver and return back index.jsp
         return "index";
