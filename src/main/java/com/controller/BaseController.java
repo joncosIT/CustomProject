@@ -28,4 +28,12 @@ public class BaseController {
 
     }
 
+	//TODO commit and push
+	@RequestMapping(value="/test/*", method = RequestMethod.GET)
+	public String test(@PathVariable String name, ModelMap model) {
+
+		model.addAttribute("message", "Test method in CLOUD");
+		return "index";
+
+	}
 }
